@@ -1,5 +1,5 @@
 # PlayerController.cs
-Nothing special, just my player controller I use a basement for my 2D platformer. Features things like a custom gravity and a jump you can perfom if you fall of a edge
+Nothing special, just my player controller I use as template for my 2D platformer. Features things like a custom gravity and a jump you can perfom if you fall of a edge
 
 ![Edge Jump Picture Wrong](http://devmag.org.za/blog/wp-content/uploads/2011/01/03_jump_a.png) --> ![Edge Jump Picture Right](http://devmag.org.za/blog/wp-content/uploads/2011/01/03_jump_b.png)
 

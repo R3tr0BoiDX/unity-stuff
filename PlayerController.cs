@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour {
 
     private bool grounded;
     private bool jump;
-    private bool edgeJump;
     private bool jumpLock;
     private bool changeJumpLock;
     private bool? walkRight;
@@ -51,7 +50,7 @@ public class PlayerController : MonoBehaviour {
 		
 		//Get input for jumping after falling of a edge. Note: "edgeJumpTime" should be a very small value, like about 0.125
         if (!grounded && edgeJumpTime > 0 && Input.GetButtonDown("Jump")) {
-            edgeJump = true;
+            jump = true;
         }
     }
 
@@ -66,26 +65,20 @@ public class PlayerController : MonoBehaviour {
                 rigid.velocity = new Vector2(-walkSpeed, rigid.velocity.y);
                 transform.localScale = Vector3.one - 2 * Vector3.right;
             }
-		//Slow down after key up
         } else {
+	//Slow down after key up
             if (rigid.velocity.x != 0) {
-                if (rigid.velocity.x > 0) {
-                    rigid.velocity -= Vector2.right * subsideSpeed;
-                }
-                if (rigid.velocity.x < 0) {
-                    rigid.velocity += Vector2.right * subsideSpeed;
-                }
+		rigid.velocity = Vector2.Lerp (rigid.velocity, Vector2.zero, subsideSpeed);
             }
         }
 
 		//Jump
-        if (jump || edgeJump) {
+        if (jump) {
             if (!jumpLock) {
                 rigid.velocity = new Vector2(rigid.velocity.x, jumpHeigt);
                 jumpLock = true;
             }
             jump = false;
-            edgeJump = false;
         }
 
 		//Do grounding check stuff

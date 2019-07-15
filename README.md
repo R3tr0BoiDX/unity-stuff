@@ -1,4 +1,4 @@
-# SimpleAnimator and SimpleAnimatorEditor
+# SimpleAnimator.cs and SimpleAnimatorEditor.cs
 Simple lightwight Animator
 - GUI Mode: Change between SpriteRenderer or Image (Unity GUI element)
 - Start At Spawn: Start animation at start (NOT AWAKE!)

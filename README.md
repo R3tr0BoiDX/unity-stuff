@@ -7,7 +7,6 @@ Simple lightwight Animator
 -Destroy Delay: Time till the gameobject gets destroyed after the animation is done.
 -Time Between Frames: How long it takes to jump from sprite to sprite. Also described as playback speed
 -Frames: All the frames of the animation. Playback starts at "Element 0"
---
 -Reset Delay: Only Editor relevant. Time, till the GUI script resets the animation. Could be "Time Between Frames" or any other desired number for testing. (Right now, this seems not to work right, sorry)
 
 ![Edge Jump Picture Right](https://github.com/R3tr0BoiDX/github-stuff/blob/master/SimpleAnimator.png)

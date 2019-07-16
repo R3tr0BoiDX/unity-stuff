@@ -1,5 +1,5 @@
 # SimpleAnimator.cs and SimpleAnimatorEditor.cs
-Simple lightweight Animator
+Simple lightweight sprite and Unity GUI animator
 - GUI Mode: Change between SpriteRenderer or Image (Unity GUI element)
 - Start At Spawn: Start animation at start (NOT AWAKE!)
 - Loop Animation: Repeat animation endless, jumping from the last to the first sprite

@@ -31,7 +31,7 @@ public class SimpleAnimatorEditor : Editor {
 		Rect rect = EditorGUILayout.GetControlRect(false, 1);
 		EditorGUI.DrawRect(rect, Color.grey);
 
-		GUIContent content = new GUIContent("Reset Delay", "Time til the animation resets");
+		GUIContent content = new GUIContent("Reset Delay", "Time until the animation resets");
 		resetDelay = EditorGUILayout.FloatField(content, resetDelay, EditorStyles.numberField);
 
 		if (GUILayout.Button("Animate")) {
